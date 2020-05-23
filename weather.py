@@ -7,7 +7,8 @@ header={
 
 # name 为城市名
 def get_html(name):
-    url = 'https://tianqiapi.com/api?version=v6&appid=56683881&appsecret=rzJC96Ao&city='+name
+    #天气API申请链接:http://doc.tianqiapi.com/603579
+    url = 'https://tianqiapi.com/api?version=v6&appid=123123123123&appsecret=123123123123&city='+name
     html = requests.get(url,headers=header)
     content = html.text.encode('gbk').decode('unicode_escape')
     data = json.loads(content)
